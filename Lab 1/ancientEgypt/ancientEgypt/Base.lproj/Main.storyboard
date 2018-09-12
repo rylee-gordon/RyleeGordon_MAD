@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ancientEgypt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ancient Egypt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeC-ow-qRL">
+                                <rect key="frame" x="111" y="60" width="153" height="101"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="UFO-3D-AnA">
+                                <rect key="frame" x="78" y="578" width="220" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0be-yD-Rxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="Pyramid">
+                                            <color key="titleColor" red="0.20460406971996548" green="0.58833227116477838" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pyramid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2g-AL-KIU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dD-U8-Ua1">
+                                        <rect key="frame" x="159" y="0.0" width="61" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="Temple">
+                                            <color key="titleColor" red="0.20460406971996548" green="0.58833227116477838" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="temple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuY-hh-DMb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="karnak" translatesAutoresizingMaskIntoConstraints="NO" id="nQR-iP-GG7">
+                                <rect key="frame" x="15" y="169" width="345" height="329"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92595189650075427" blue="0.86861532043233125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nQR-iP-GG7" firstAttribute="centerX" secondItem="EeC-ow-qRL" secondAttribute="centerX" id="Kwi-AT-Gmr"/>
+                            <constraint firstItem="EeC-ow-qRL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="QTV-9h-BYD"/>
+                            <constraint firstItem="nQR-iP-GG7" firstAttribute="width" secondItem="EeC-ow-qRL" secondAttribute="height" multiplier="345:101" id="RPF-SA-Bls"/>
+                            <constraint firstItem="UFO-3D-AnA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVp-vl-fuB"/>
+                            <constraint firstItem="nQR-iP-GG7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dpm-c4-ALX"/>
+                            <constraint firstItem="nQR-iP-GG7" firstAttribute="top" secondItem="EeC-ow-qRL" secondAttribute="bottom" constant="7" id="j2a-dT-vHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UFO-3D-AnA" secondAttribute="bottom" constant="55" id="q4L-aT-QKA"/>
+                            <constraint firstItem="EeC-ow-qRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uib-F4-WCm"/>
+                            <constraint firstItem="nQR-iP-GG7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:29" id="unl-Ko-mPR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="artImage" destination="nQR-iP-GG7" id="l63-3J-opL"/>
+                        <outlet property="messageText" destination="EeC-ow-qRL" id="uZY-v3-hQj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="karnak" width="440" height="330"/>
+    </resources>
+</document>
