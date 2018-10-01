@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pizzaCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Many Pizzas To Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-hp-Hce">
+                                <rect key="frame" x="88" y="40" width="238" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="0.78838276590792655" green="0.0" blue="0.029508412260291585" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-L2-cj7">
+                                <rect key="frame" x="80.666666666666671" y="326" width="252.66666666666663" height="104"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KMo-UX-cM9">
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount of people:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LY-2x-jwP">
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# people" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PRD-Kh-B36">
+                                                <rect key="frame" x="171" y="0.0" width="81" height="22"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="IfV-iz-xoA">
+                                        <rect key="frame" x="0.0" y="43" width="241.33333333333334" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slices per person:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-Ao-L5O">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.66666666666666" height="19"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# slices" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jco-1Y-1on">
+                                                <rect key="frame" x="167.66666666666669" y="0.0" width="73.666666666666686" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="73" id="6GQ-Wc-m50"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ty2-MZ-YoI">
+                                        <rect key="frame" x="0.0" y="83" width="221.33333333333334" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of pizzas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz5-KR-5Gb">
+                                                <rect key="frame" x="0.0" y="0.0" width="139.33333333333334" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKE-fV-k9a">
+                                                <rect key="frame" x="169.33333333333331" y="0.0" width="52" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Hz5-KR-5Gb" firstAttribute="baseline" secondItem="VKE-fV-k9a" secondAttribute="firstBaseline" id="xCn-Z5-YkC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IfV-iz-xoA" secondAttribute="trailing" constant="12" id="ClK-lH-vWy"/>
+                                    <constraint firstItem="IfV-iz-xoA" firstAttribute="centerY" secondItem="rhs-L2-cj7" secondAttribute="centerY" id="VJu-6t-UbJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ty2-MZ-YoI" secondAttribute="trailing" constant="32" id="WbA-P8-va8"/>
+                                    <constraint firstItem="ty2-MZ-YoI" firstAttribute="top" secondItem="rhs-L2-cj7" secondAttribute="top" constant="83" id="bHC-sR-KDY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97943554170309022" green="0.99763482809066772" blue="0.78805694676391658" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ekS-hp-Hce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="81b-9Q-PYs"/>
+                            <constraint firstAttribute="bottom" secondItem="rhs-L2-cj7" secondAttribute="bottom" constant="180" id="TDB-g5-C9s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rhs-L2-cj7" secondAttribute="bottom" constant="146" id="dCK-S6-P1g">
+                                <variation key="widthClass=compact" constant="160"/>
+                            </constraint>
+                            <constraint firstItem="ekS-hp-Hce" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="f14-Kd-JZG">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="rhs-L2-cj7" firstAttribute="centerX" secondItem="ekS-hp-Hce" secondAttribute="centerX" id="jNV-w9-U6q"/>
+                            <constraint firstItem="rhs-L2-cj7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ybU-fD-Jyk"/>
+                            <constraint firstItem="rhs-L2-cj7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zZI-2W-n8y"/>
+                            <constraint firstItem="rhs-L2-cj7" firstAttribute="top" secondItem="ekS-hp-Hce" secondAttribute="bottom" constant="23" id="ztE-5g-6cO">
+                                <variation key="widthClass=compact" constant="19"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dCK-S6-P1g"/>
+                                <exclude reference="TDB-g5-C9s"/>
+                                <exclude reference="jNV-w9-U6q"/>
+                                <exclude reference="ybU-fD-Jyk"/>
+                                <exclude reference="ztE-5g-6cO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="dCK-S6-P1g"/>
+                                <include reference="jNV-w9-U6q"/>
+                                <exclude reference="zZI-2W-n8y"/>
+                                <include reference="ztE-5g-6cO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="TDB-g5-C9s"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="ybU-fD-Jyk"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="userTappedBackgroundWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="XNK-oF-RO0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="numberPizzas" destination="VKE-fV-k9a" id="ANK-DB-rVS"/>
+                        <outlet property="people" destination="PRD-Kh-B36" id="Z02-mx-G3g"/>
+                        <outlet property="slices" destination="Jco-1Y-1on" id="ah3-i3-QJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
