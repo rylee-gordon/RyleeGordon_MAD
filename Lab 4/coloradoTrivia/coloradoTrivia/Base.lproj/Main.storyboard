@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coloradoTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colorado Trivia " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-UK-taH">
+                                <rect key="frame" x="103" y="68" width="169" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1d-Uq-xE6">
+                                <rect key="frame" x="15" y="315" width="345" height="99"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test your knowledge on facts about the state of Colorado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-kG-yUB">
+                                        <rect key="frame" x="16" y="0.0" width="313" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wof-RY-ap3">
+                                        <rect key="frame" x="121" y="58" width="103" height="41"/>
+                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="START TRIVIA">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NbF-Y8-L5L"/>
+                                            <segue destination="Rxz-ip-Egv" kind="show" identifier="startSegue" id="21B-St-NxA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorado-flag" translatesAutoresizingMaskIntoConstraints="NO" id="jtn-AM-Mbd">
+                                <rect key="frame" x="20" y="125" width="335" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="5Ly-Jf-l7V"/>
+                                    <constraint firstAttribute="height" constant="159" id="dja-C5-rdV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Ly-Jf-l7V"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5Ly-Jf-l7V"/>
+                                        <exclude reference="dja-C5-rdV"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nkw-UK-taH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bkj-PV-e0d"/>
+                            <constraint firstItem="Nkw-UK-taH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="HVV-R5-VQ8">
+                                <variation key="widthClass=compact" constant="48"/>
+                            </constraint>
+                            <constraint firstItem="y1d-Uq-xE6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7d-XZ-uL2"/>
+                            <constraint firstItem="y1d-Uq-xE6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MN7-UI-oOw"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="centerX" secondItem="Nkw-UK-taH" secondAttribute="centerX" id="Ohi-Dw-emb"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="top" secondItem="Nkw-UK-taH" secondAttribute="bottom" constant="8" symbolic="YES" id="SyE-ox-w7J"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mA9-XE-fOs"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="centerX" secondItem="y1d-Uq-xE6" secondAttribute="centerX" id="mhg-oV-cZ2"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mlE-E1-4tm"/>
+                            <constraint firstAttribute="trailing" secondItem="jtn-AM-Mbd" secondAttribute="trailing" constant="20" id="pZp-I4-gBB"/>
+                            <constraint firstItem="y1d-Uq-xE6" firstAttribute="top" secondItem="jtn-AM-Mbd" secondAttribute="bottom" constant="31" id="pbg-WP-KEk"/>
+                            <constraint firstItem="y1d-Uq-xE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="piW-g4-Zgo"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="top" secondItem="Nkw-UK-taH" secondAttribute="bottom" constant="28" id="qZW-Vp-hJy"/>
+                            <constraint firstItem="jtn-AM-Mbd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s08-K7-86a"/>
+                            <constraint firstItem="y1d-Uq-xE6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="sOZ-MI-oRe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ohi-Dw-emb"/>
+                                <exclude reference="SyE-ox-w7J"/>
+                                <exclude reference="mhg-oV-cZ2"/>
+                                <exclude reference="s08-K7-86a"/>
+                                <exclude reference="MN7-UI-oOw"/>
+                                <exclude reference="piW-g4-Zgo"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ohi-Dw-emb"/>
+                                <include reference="SyE-ox-w7J"/>
+                                <exclude reference="mA9-XE-fOs"/>
+                                <include reference="mhg-oV-cZ2"/>
+                                <exclude reference="mlE-E1-4tm"/>
+                                <exclude reference="pZp-I4-gBB"/>
+                                <exclude reference="qZW-Vp-hJy"/>
+                                <include reference="s08-K7-86a"/>
+                                <exclude reference="I7d-XZ-uL2"/>
+                                <include reference="MN7-UI-oOw"/>
+                                <exclude reference="pbg-WP-KEk"/>
+                                <include reference="piW-g4-Zgo"/>
+                                <exclude reference="sOZ-MI-oRe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="33.733133433283363"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="MDC-px-Gym">
+            <objects>
+                <viewController id="Rxz-ip-Egv" customClass="SecondViewController" customModule="coloradoTrivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4kC-YK-r6w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colorado Trivia " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBd-YA-dgC">
+                                <rect key="frame" x="103" y="30" width="169" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="RNG-MX-Hcq">
+                                <rect key="frame" x="10" y="94" width="355" height="267.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yJi-9a-H2I">
+                                        <rect key="frame" x="36" y="0.0" width="283" height="197"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What does the red represent in the Colorado flag?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOg-jC-hWI">
+                                                <rect key="frame" x="0.0" y="0.0" width="283" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="wTb-tm-jfy">
+                                                <rect key="frame" x="0.0" y="46" width="283" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZO-zk-ajY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Rocks">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="rocks1:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="etn-Ge-emn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLs-11-mTq">
+                                                        <rect key="frame" x="161.5" y="0.0" width="121.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Soil">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="soil1:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="ByA-EW-u8e"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the state flower of Colorado?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ys-of-ikI">
+                                                <rect key="frame" x="0.0" y="81" width="283" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="OZR-2e-h8W"/>
+                                                    <constraint firstAttribute="height" constant="41" id="i04-ol-XEt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="OZR-2e-h8W"/>
+                                                        <exclude reference="i04-ol-XEt"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="OZR-2e-h8W"/>
+                                                        <include reference="i04-ol-XEt"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Nau-1S-OGx">
+                                                <rect key="frame" x="0.0" y="106.5" width="283" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMP-OX-GwB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Columbine">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="columbine1:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="L83-E8-ewa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bv-67-mV3">
+                                                        <rect key="frame" x="161.5" y="0.0" width="121.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Magnolia">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="magnolia1:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="spX-dI-4JX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the capital of Colorado?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ1-2b-2ba">
+                                                <rect key="frame" x="0.0" y="141.5" width="283" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="244" id="mOE-sE-pBj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="mOE-sE-pBj"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=compact-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="mOE-sE-pBj"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SHV-sP-paX">
+                                                <rect key="frame" x="0.0" y="167" width="283" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOg-m6-eZn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Denver">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="denver1:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="aKA-Bb-TBS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRw-yo-qcz">
+                                                        <rect key="frame" x="161.5" y="0.0" width="121.5" height="30"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Colorado Springs">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="coloradoSpgs1:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="gp4-N9-tbw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="widthClass=compact" alignment="fill" axis="vertical"/>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvm-wd-Vx8">
+                                        <rect key="frame" x="148" y="204" width="59.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rz-qi-oIe">
+                                        <rect key="frame" x="154.5" y="237.5" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="HOME">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="home:" destination="Rxz-ip-Egv" eventType="touchUpInside" id="jad-UB-UBW"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="homeSegue" id="aYc-gT-0ll"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RNG-MX-Hcq" firstAttribute="top" secondItem="aBd-YA-dgC" secondAttribute="bottom" constant="35" id="0xS-1i-ibO"/>
+                            <constraint firstItem="aBd-YA-dgC" firstAttribute="centerX" secondItem="4kC-YK-r6w" secondAttribute="centerX" id="Bex-2r-Eba"/>
+                            <constraint firstItem="aBd-YA-dgC" firstAttribute="top" secondItem="IbW-Tg-3ub" secondAttribute="top" constant="10" id="asB-DU-q5X"/>
+                            <constraint firstItem="RNG-MX-Hcq" firstAttribute="leading" secondItem="4kC-YK-r6w" secondAttribute="leading" constant="10" id="hRh-6T-4iG"/>
+                            <constraint firstItem="RNG-MX-Hcq" firstAttribute="centerX" secondItem="4kC-YK-r6w" secondAttribute="centerX" id="htp-NB-3xF"/>
+                            <constraint firstAttribute="trailing" secondItem="RNG-MX-Hcq" secondAttribute="trailing" constant="10" id="xQc-o2-Ara"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IbW-Tg-3ub"/>
+                    </view>
+                    <connections>
+                        <outlet property="coloradoSpgs" destination="RRw-yo-qcz" id="DyT-FF-MP8"/>
+                        <outlet property="columbine" destination="vMP-OX-GwB" id="Aia-WD-hee"/>
+                        <outlet property="denver" destination="aOg-m6-eZn" id="iRg-FY-IDV"/>
+                        <outlet property="magnolia" destination="2bv-67-mV3" id="wsf-PM-fJD"/>
+                        <outlet property="rocks" destination="8ZO-zk-ajY" id="1VU-jO-Q3Y"/>
+                        <outlet property="score" destination="Cvm-wd-Vx8" id="5Gp-Mb-GLA"/>
+                        <outlet property="soil" destination="hLs-11-mTq" id="1mz-IO-omc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNJ-dm-8wZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.60000000000002" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="colorado-flag" width="600" height="410"/>
+    </resources>
+</document>
